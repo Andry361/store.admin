@@ -17,6 +17,7 @@ const routes: Routes = [
       { path: 'groups', loadChildren: () => System.import('./groups/groups.module') },
       { path: 'users', loadChildren: () => System.import('./users/users.module') },
       { path: 'products', loadChildren: () => System.import('./products/products.module') },
+      { path: 'analytics', loadChildren: () => System.import('./analytics/analytics.module') },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: () => System.import('./dashboard/dashboard.module') },
       { path: 'editors', loadChildren: () => System.import('./editors/editors.module') },

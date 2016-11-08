@@ -53,6 +53,32 @@ export const PAGES_MENU = [
         ]
       },
       {
+        path: 'analytics',
+        data: {
+          menu: {
+            title: 'Аналитика',
+            icon: 'fa fa-line-chart',
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        },
+        children: [
+          {
+            path: 'charts',
+            data: {
+              menu: {
+                title: 'Графики',
+                icon: 'fa fa-pie-chart',
+                selected: false,
+                expanded: false,
+                order: 0
+              }
+            }
+          }
+        ]
+      },
+      {
         path: 'dashboard',
         data: {
           menu: {

@@ -1,4 +1,4 @@
-import { Routes, RouterModule }  from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { Pages } from './pages.component';
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
@@ -16,6 +16,7 @@ const routes: Routes = [
     children: [
       { path: 'groups', loadChildren: () => System.import('./groups/groups.module') },
       { path: 'users', loadChildren: () => System.import('./users/users.module') },
+      { path: 'products', loadChildren: () => System.import('./products/products.module') },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: () => System.import('./dashboard/dashboard.module') },
       { path: 'editors', loadChildren: () => System.import('./editors/editors.module') },

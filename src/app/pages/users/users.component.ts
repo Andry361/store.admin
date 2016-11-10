@@ -18,6 +18,7 @@ export class UsersTable {
       addButtonContent: '<i class="ion-ios-plus-outline"></i>',
       createButtonContent: '<i class="ion-checkmark"></i>',
       cancelButtonContent: '<i class="ion-close"></i>',
+      confirmCreate: true
     },
     edit: {
       editButtonContent: '<i class="ion-edit"></i>',
@@ -63,7 +64,9 @@ export class UsersTable {
       this.source.load(data);
     });
   }
-
+ onCreateConfirm(event): void {
+   alert(event);
+ }
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();

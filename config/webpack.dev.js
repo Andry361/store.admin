@@ -24,7 +24,7 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
   HMR: HMR
 });
 // const distPath = 'dist'
-const distPath = '../Store.UI'
+const distPath = '../Store.UI/Content/admin'
 /**
  * Webpack configuration
  *

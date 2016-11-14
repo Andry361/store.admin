@@ -30,30 +30,30 @@ export class UsersTable {
       confirmDelete: true
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number'
-      },
-      firstName: {
-        title: 'First Name',
+      // id: {
+      //   title: 'ID',
+      //   type: 'number'
+      // },
+      Name: {
+        title: 'Имя',
         type: 'string'
       },
-      lastName: {
-        title: 'Last Name',
-        type: 'string'
-      },
-      username: {
-        title: 'Username',
-        type: 'string'
-      },
-      email: {
-        title: 'E-mail',
-        type: 'string'
-      },
-      age: {
-        title: 'Age',
-        type: 'number'
-      }
+      // lastName: {
+      //   title: 'Last Name',
+      //   type: 'string'
+      // },
+      // username: {
+      //   title: 'Username',
+      //   type: 'string'
+      // },
+      // email: {
+      //   title: 'E-mail',
+      //   type: 'string'
+      // },
+      // age: {
+      //   title: 'Age',
+      //   type: 'number'
+      // }
     }
   };
 

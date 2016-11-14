@@ -23,7 +23,8 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
   ENV: ENV,
   HMR: HMR
 });
-
+// const distPath = 'dist'
+const distPath = '../Store.UI'
 /**
  * Webpack configuration
  *
@@ -52,7 +53,7 @@ module.exports = function (options) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-path
        */
-      path: helpers.root('dist'),
+      path: helpers.root(distPath),
 
       /**
        * Specifies the name of each output file on disk.
@@ -60,7 +61,7 @@ module.exports = function (options) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-filename
        */
-      filename: '[name].bundle.js',
+      filename: 'app/[name].bundle.js',
 
       /**
        * The filename of the SourceMaps for the JavaScript files.
@@ -68,14 +69,14 @@ module.exports = function (options) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-sourcemapfilename
        */
-      sourceMapFilename: '[name].map',
+      sourceMapFilename: 'app/[name].map',
 
       /** The filename of non-entry chunks as relative path
        * inside the output.path directory.
        *
        * See: http://webpack.github.io/docs/configuration.html#output-chunkfilename
        */
-      chunkFilename: '[id].chunk.js',
+      chunkFilename: 'app/[id].chunk.js',
 
       library: 'ac_[name]',
       libraryTarget: 'var',
@@ -121,7 +122,7 @@ module.exports = function (options) {
         options: {
           context: helpers.root('src'),
           output: {
-            path: helpers.root('dist')
+            path: helpers.root(distPath)
           },
 
           /**
@@ -157,7 +158,7 @@ module.exports = function (options) {
         aggregateTimeout: 300,
         poll: 1000
       },
-      outputPath: helpers.root('dist')
+      outputPath: helpers.root(distPath)
     },
 
     /*

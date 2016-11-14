@@ -150,11 +150,12 @@ module.exports = function (options) {
         },
 
         {
-          test: /\.woff(2)?(\?v=.+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+          test: /\.woff(2)?(\?v=.+)?$/, loader: 'url-loader?publicPath=../&name=./app/[hash].[ext]&limit=10000&mimetype=application/font-woff'//publicPath=../&
         },
 
         {
-          test: /\.(ttf|eot|svg)(\?v=.+)?$/, loader: 'file-loader'
+          test: /\.(ttf|eot|svg)(\?v=.+)?$/, loader: 'file-loader?publicPath=../&name=./app/[hash].[ext]'//publicPath=../&
+
         },
 
         {
@@ -188,10 +189,10 @@ module.exports = function (options) {
      * See: http://webpack.github.io/docs/configuration.html#plugins
      */
     plugins: [
-      new ExtractTextPlugin({filename: 'initial.css', allChunks: true}),
+      new ExtractTextPlugin({filename: 'app/initial.css', allChunks: true}),
 
       new AssetsPlugin({
-        path: helpers.root('dist'),
+        path: helpers.root('dist/app'),
         filename: 'webpack-assets.json',
         prettyPrint: true
       }),
@@ -239,7 +240,7 @@ module.exports = function (options) {
        */
       new CopyWebpackPlugin([{
           from: 'src/assets',
-          to: 'assets'
+          to: 'app/assets'
         }, {
           from: 'src/meta'
         } ]),
@@ -257,6 +258,9 @@ module.exports = function (options) {
         title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,
+        output: {
+          path: 'dist',
+        },
         inject: 'head'
       }),
 

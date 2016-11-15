@@ -13,7 +13,7 @@ import { routing } from './app.routing';
 
 // App is our top level component
 import { App } from './app.component';
-import { AppState, InternalStateType } from './app.service';
+import { AppState, InternalStateType, Url } from './app.service';
 import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
@@ -21,6 +21,7 @@ import { PagesModule } from './pages/pages.module';
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
+  Url,
   GlobalState
 ];
 

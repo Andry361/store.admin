@@ -39,3 +39,13 @@ export class AppState {
     return JSON.parse(JSON.stringify(object));
   }
 }
+
+@Injectable()
+export class Url {
+  private serverUrl: string = "http://localhost:11405";
+  constructor() {
+  }
+  public get(path: string): string {
+    return this.serverUrl + path;
+  }
+}
